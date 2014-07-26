@@ -206,6 +206,7 @@
     if (IOS_VERSION_7) {
         topLayoutGuide = 20.0;
         if (self.navigationController && !self.navigationController.navigationBarHidden) {
+            topLayoutGuide = self.navigationController.navigationBar.frame.origin.y;
             topLayoutGuide += self.navigationController.navigationBar.frame.size.height;
         }
     }
